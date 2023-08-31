@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Generator RPG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Julius+Sans+One&display=swap">
+</head>
+<body>
+    <div class="container-style-1">
+        <div class="container-style-2">
+            <h1>Name Generator RPG</h1>
+            <h5><em>(Based on D&D races and classes)</em></h5>
+            <form id="name-generator-form">
+                <label for="race">Race:</label>
+                <select id="race" name="race">
+                    <option value="human">Human</option>
+                    <option value="elf">Elf</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="halfling">Halfling</option>
+                    <option value="half-elf">Half-Elf</option>
+                    <option value="half-orc">Half-Orc</option>
+                    <option value="gnome">Gnome</option>
+                    <option value="tiefling">Tiefling</option>
+                    <option value="dragonborn">Dragonborn</option>
+                    <option value="mermaid">Mermaid</option>
+                </select>
+                <label for="class">Class:</label>
+                <select id="class" name="class">
+                    <option value="fighter">Fighter</option>
+                    <option value="paladin">Paladin</option>
+                    <option value="barbarian">Barbarian</option>
+                    <option value="monk">Monk</option>
+                    <option value="rogue">Rogue</option>
+                    <option value="ranger">Ranger</option>
+                    <option value="druid">Druid</option>
+                    <option value="sorcerer">Sorcerer</option>
+                    <option value="wizard">Wizard</option>
+                    <option value="warlock">Warlock</option>
+                    <option value="cleric">Cleric</option>
+                    <option value="bard">Bard</option>
+                </select>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="world">World:</label>
+                <input type="text" id="world" name="world" placeholder="Medieval Fantasy">
+                <div class="temperature-container">
+                    <label for="temperatureRange">Randomness :</label>
+                    <input type="range" id="temperatureRange" min="1" max="1.5" step="0.25" value="1" list="temperatureOptions">
+                    <datalist id="temperatureOptions">
+                        <option value="1" label="Normal"></option>
+                        <option value="1.25" label="High"></option>
+                        <option value="1.5" label="Very High"></option>
+                    </datalist>
+                    <span id="selectedTemperature">Normal</span>
+                </div>
+                <button type="submit">Generate Names</button>
+            </form>
+            <div id="generated-names">
+                <!-- Generated name here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
